@@ -1,20 +1,26 @@
 {
     "manifest_version": 3,
-    "name": "Custom Wallpaper Extension",
+    "name": "New Tab Wallpaper",
     "version": "1.0",
-    "description": "Replaces the new tab background with a custom wallpaper.",
-    "author": "Your Name",
-    "chrome_url_overrides": {
-      "newtab": "newtab.html"
-    },
+    "author": "Mereck McGowan",
     "permissions": ["storage"],
+    "background": {
+        "service_worker": "background.js"
+    },
     "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
-      }
-    }
-  }
+        "default_popup": "popup.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+        
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["wallpapers/*.jpg"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
+
+  
   

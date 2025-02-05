@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wallpaper Settings</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 10px; text-align: center; }
-    input { margin-top: 10px; width: 100%; }
-    button { margin-top: 10px; width: 100%; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Settings</title>
+    <style>
+        body { font-family: Arial, sans-serif; width: 300px; padding: 10px; }
+        input { width: 100%; margin-top: 10px; }
+        button { width: 100%; margin-top: 10px; cursor: pointer; }
+    </style>
 </head>
 <body>
-  <h2>Set New Wallpaper</h2>
-  <input type="text" id="wallpaperUrl" placeholder="Enter image URL">
-  <button id="save">Save</button>
-  <script src="popup.js"></script>
+    <h3>Choose Wallpaper</h3>
+    <button id="randomWallpaper">Use Random Wallpaper</button>
+    <h4>Or enter your own URL:</h4>
+    <input type="text" id="customUrl" placeholder="Enter image URL">
+    <button id="saveCustom">Save Custom Wallpaper</button>
+
+    <script src="popup.js"></script>
 </body>
 </html>

@@ -4,6 +4,8 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    cursor: url('assets/cursor2.png') 48 48, auto; /*So if you want to use a custom im for cusor divede pixel num of im bhy 2 to get the proper overlap of where im should be*/
+    /*Note that if the image has a transparent background this may cause issues you can use gimp to crop to content and remove most of transparent padding*/
   }
   
   #background {
@@ -14,3 +16,182 @@ body, html {
     transition: background-image 1s ease-in-out;
   }
   
+  /* Center content */
+#search-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Search box styling */
+  #search-box {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    outline: none;
+  }
+  
+  /* Search button */
+  #search-form button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+
+  /* Custom cursor */
+body {
+    cursor: url('assets/cursor2.png'), auto; /* Replace with your own cursor image */
+  }
+  
+  /* Change cursor when hovering over links */
+  a, button, input[type="submit"] {
+    cursor: pointer;
+  }
+  
+  /* Text cursor when hovering over text inputs */
+  input[type="text"], textarea {
+    cursor: text;
+  }
+  
+  #pet-container {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    pointer-events: none; /* Prevents pets from interfering with clicks */
+  }
+  
+  .pet {
+    position: absolute;
+    bottom: 0;
+    width: 100px; /* Width of one frame */
+    height: 100px; /* Height of one frame */
+    background-image: url("pets/cat-sprite.png"); /* Replace with your pet's sprite sheet */
+    background-size: 1200px 100px; /* Total width = 100px * 12 frames, adjust height if needed */
+    animation: run-pet 10s linear infinite, sprite-animation 1s steps(12) infinite; /* 12 frames */
+  }
+  
+  @keyframes run-pet {
+    from {
+      left: -100px; /* Start position off-screen */
+    }
+    to {
+      left: 100vw; /* Move across screen */
+    }
+  }
+  
+  @keyframes sprite-animation {
+    from {
+      background-position: 0 0; /* Start at the first frame */
+    }
+    to {
+      background-position: -1200px 0; /* End at the last frame (12 frames) */
+    }
+  }
+/* 
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    } */
+
+    #clockCanvas {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000; /* Ensures the clock appears on top of other elements */
+        background-color: transparent;
+    }
+    
+    #weather-container {
+        position: absolute;
+        top: 120px; /* Position weather below the clock */
+        left: 10px;
+        z-index: 1000;
+        color: white;
+    }
+    
+    .weather-text {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .weather-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+
+
+    #todo-container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      color: white;
+  }
+  
+  #task-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+  }
+  
+  li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+  }
+  
+  li:hover {
+      background: rgba(255, 255, 255, 0.2);
+  }
+  
+  button {
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+  }
+  
+  button:hover {
+      background: #e63946;
+  }
+  
+  input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 10px;
+  }
+ 
+  .parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Prevents stretching */
+    max-width: 100%;
+  }
+  .task-container {
+    max-width: 100%; /* Prevents it from extending too far */
+    overflow-wrap: break-word; /* Ensures words break correctly */
+    word-wrap: break-word;
+    white-space: normal; /* Allows wrapping */
+  }
+      

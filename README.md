@@ -10,11 +10,13 @@ To edit the wallpapers simply add wallpapers into the wallpaper folder, and crea
 If you want to quickly change the image you can click on the extension on the top right of google and paste an image link into the popup and reload the page.
 
 
+
 ### To run this program
 Go to chrome://extensions/ and turn on Dev mode in the top right.
 Next, select "Load Unpacked" and navigate to the folder you cloned the repo into.
 Then toggle the extension, and reload Chrome.
 Chome may ask if you wish to continue with the extension when you first unpack and open a new tab. 
+If you make changes to the code ensure you reload the extension in the chrome://extensions/ page to see those changes
 
 
 

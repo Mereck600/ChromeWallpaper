@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         chrome.runtime.getURL("wallpapers/background3.jpeg"),
         chrome.runtime.getURL("wallpapers/background4.jpeg"),
         chrome.runtime.getURL("wallpapers/background5.jpeg"),
-        chrome.runtime.getURL("wallpapers/background6.jpeg"),
+       // chrome.runtime.getURL("wallpapers/background6.jpeg"),
         chrome.runtime.getURL("wallpapers/background7.jpeg"),
         chrome.runtime.getURL("wallpapers/background8.jpeg"),
         chrome.runtime.getURL("wallpapers/background9.jpeg"),

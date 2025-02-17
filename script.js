@@ -302,6 +302,18 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }
 
+    function removeSponsoredResults() {
+        const ads = document.querySelectorAll('[aria-label="Sponsored"]');
+        ads.forEach(ad => ad.closest('div')?.remove());
+      }
+      
+      // Run initially to remove ads
+      removeSponsoredResults();
+      
+      // Observe the DOM for dynamic changes (useful for infinite scrolling)
+      const observer = new MutationObserver(removeSponsoredResults);
+      observer.observe(document.body, { childList: true, subtree: true });
+
 
 
 

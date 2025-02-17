@@ -12,15 +12,18 @@
     },
     "chrome_url_overrides": {
         "newtab": "newtab.html"
-        
     },
     "web_accessible_resources": [
         {
             "resources": ["wallpapers/*.jpg"],
             "matches": ["<all_urls>"]
         }
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.google.com/search?*"],
+            "js": ["script.js"],
+            "run_at": "document_end"
+        }
     ]
 }
-
-  
-  

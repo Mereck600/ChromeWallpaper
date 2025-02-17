@@ -2,6 +2,7 @@
 Personalized Chrome Wallpaper Extension
 
 
+
 # How to use
 First clone repo to local machine.
 If you want to use the basic wallpaper function stay in the main branch.
@@ -20,7 +21,10 @@ If you make changes to the code ensure you reload the extension in the chrome://
 
 
 
-### Notes: The sprite animations are not yet fully implemented but will be soon
+### Notes: 
+The sprite animations are not yet fully implemented but will be soon
+
+All data & information on the Todo board is stored on your local machine
 
 
 ## Attributions

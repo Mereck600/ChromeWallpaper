@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "New Tab Wallpaper",
+    "name": "Very Cool - newtab",
     "version": "1.0",
     "author": "Mereck McGowan",
     "permissions": ["storage"],
@@ -25,5 +25,10 @@
             "js": ["script.js"],
             "run_at": "document_end"
         }
-    ]
+    ],
+    "icons": {
+        "16": "assets/icons/OtherLogo.png",
+        "48": "assets/icons/OtherLogo.png",
+        "128": "assets/icons/OtherLogo.png"
+    }
 }
